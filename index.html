@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Lista de Atividades</h1>
+<div class="container">
+    <!-----------------------------------Atividade 1---------------------------------------->
+    <script>
+        function cadastroAlunos(){
+            let alunos = []
+            for (let i = 1; i < 10; i++){
+                let aluno = prompt(`Digite o nome do ${i}° aluno`)
+                alunos.push(aluno) 
+            }
+            alert(`Alunos cadastrados: \n${alunos.join("\n")}`)
+        }
+    </script>
+    <button onclick="cadastroAlunos()">Atividade 1</button>
+
+
+    <!-----------------------------------Atividade 2---------------------------------------->
+    <button onclick="
+    let idades = ['1','2','3','4','5']
+    
+    for(let i = 0; i < idades.length; i++){
+        alert(`A ${i + 1}° idade é ${idades[i]} anos`)
+    }
+    ">Atividade 2</button>
+
+<!-----------------------------------Atividade 3---------------------------------------->
+    <button onclick="
+        let alunos = ['Ana','Breno','Carla']
+        alert(`Quantidade de alunos cadastrados:\n${alunos.length}`)
+    ">Atividade 3</button>
+    
+    <!-----------------------------------Atividade 4---------------------------------------->
+    <script>
+        function maioridade(){
+            let idade = prompt('Informe a idade')
+            if(idade < 18){
+                alert("O usuário é menor de idade")
+            }else{
+                alert("O usuário é maior de idade")
+            }
+        }
+    </script>
+    <button onclick="maioridade()">Atividade 4</button>
+
+    <!-----------------------------------Atividade 5---------------------------------------->
+<script>
+    function situacaoEscolar(){
+        let nota = prompt(`Informe a nota do aluno`)
+        if(nota >= 7){
+            alert(`Aprovado`)
+        }else{
+            alert(`Reprovado`)
+        }
+    }
+</script>
+    <button onclick="situacaoEscolar()">Atividade 5</button>
+
+    <!-----------------------------------Atividade 6---------------------------------------->
+    <button onclick="
+    let nomes = []
+    while(true){
+    let escolha = prompt('---PAINEL---\n1 - Cadastrar\n 2 - Listar\n 3 - Sair')
+    switch(escolha){
+        case '1': {
+            let nome = prompt('Você escolheu cadastrar, digite um nome')
+            nomes.push(nome)
+            alert('Nome cadastrado com sucesso')
+            break
+        }
+
+        case '2': {
+            alert(`Nomes cadastrados:\n${nomes.join('\n')}`)
+            break
+        }
+
+        case '3': {
+            alert('Você escolheu sair, programa encerrado.')
+            return
+        }
+
+        default: {
+            alert('Você escolheu uma opção inválida, tente novamente')
+        }
+    }
+}
+    ">Atividade 6</button>
+
+    <!-----------------------------------Atividade 7---------------------------------------->
+<button onclick="
+    let produtos = []
+    
+    produtos.push('Arroz')
+    produtos.push('Feijão')
+    produtos.push('Farinha')
+
+    alert(`Produtos registrados:\n${produtos.join('\n')}`)
+">Atividade 7</button>
+
+<!-----------------------------------Atividade 8---------------------------------------->
+<script>
+function imprimir(){
+    let elementos = ['Água','Fogo','Terra','Ar']
+
+    for(let i = 0; i < elementos.length; i++){
+        alert(`Lista de elementos:\n${elementos[i]}`)
+    }
+}
+</script>
+<button onclick="imprimir()">Atividade 8</button>
+
+<!-----------------------------------Atividade 9---------------------------------------->
+<button onclick="
+    alert('Vamos somar dois números')
+    let numeros = []
+
+    for(let i = 0; i < 2; i++){
+        let numero = Number(prompt(`Digite o ${i + 1}° número`))
+        numeros.push(numero)
+    }
+
+    let total = 0
+
+    for(let i = 0; i < numeros.length; i++){
+        total += numeros[i]
+    }
+    
+    alert(`${numeros[0]} + ${numeros[1]} = ${total}`)
+
+">Atividade 9</button>
+
+<!-----------------------------------Atividade 10---------------------------------------->
+<script>
+    function calcularMedia(){
+    alert('Vamos calcular a sua média')
+    let notas = []
+
+    for(let i = 0; i < 3; i++){
+        let nota = Number(prompt(`Informe a ${i + 1}° nota`))
+        notas.push(nota)
+    }
+
+    let media = 0
+
+    for(let i = 0; i < notas.length; i++){
+        media += notas[i]    
+    }
+    media = media / 3
+    alert(`A sua média foi ${media}`) 
+    
+    return media 
+}
+</script>
+
+<button onclick="calcularMedia()">Atividade 10</button>
+
+<!-----------------------------------Atividade 11---------------------------------------->
+ <button onclick="
+    let media = calcularMedia()
+
+    if (media < 5){
+        alert(`Média = ${media}\nSituação = Reprovado`)
+    }else if (media < 7 ){
+        alert(`Média = ${media}\nSituação = Recuperação`)
+    }else{
+        alert(`Média = ${media}\nSituação = Aprovado`)
+    }
+ ">Atividade 11</button>
+
+<!-----------------------------------Atividade 12---------------------------------------->
+<button onclick="
+    let nomesAtividade12 = []
+    while(true){
+        let escolha = prompt(`---PAINEL---\n1 - Cadastrar nome\n2 - Exibir nome\n3 - Sair`)
+        
+        switch(escolha){
+            case '1': {
+                let nome = prompt(`Informe um nome para ser cadastrado`)
+                nomesAtividade12.push(nome)
+                alert(`Nome cadastrado com sucesso!`)
+                break
+            }
+
+            case '2': {
+                for(let i = 0; i < nomesAtividade12.length; i++){
+                alert(`${i} - ${nomesAtividade12[i]}`)
+                }
+                break
+            }
+            
+            case '3': {
+                alert(`Programa encerrando...`)
+                return
+            }
+
+            default : {
+                alert(`Você escolheu uma opção inválida`)
+                break
+            }
+
+        }
+    }
+">Atividade 12</button>
+
+<!-----------------------------------Atividade 13---------------------------------------->
+<button onclick="
+    let idadesAtividade13 = ['20','15','30','99','10']
+
+    for (let i = 0; i < idadesAtividade13.length; i++){
+        if(idadesAtividade13[i] >= 18){
+            alert(`Índice ${i} - Idade ${idadesAtividade13[i]} = Maior de idade`)
+        }
+    }
+">Atividade 13</button>
+
+<!-----------------------------------Atividade 14---------------------------------------->
+<button onclick="
+    let escolha = prompt(`---PAINEL---\nA - Admin\nU- Usuário`).toUpperCase()
+
+    switch(escolha){
+        case 'A': {
+            alert(`Você acessou como admin`)
+            break
+        }
+
+        case 'B': {
+            alert(`Você acessou como usuário`)
+            break
+        }
+
+        default: {
+            alert('Acesso inválido')
+            break
+        }
+    }
+">Atividade 14</button>
+
+
+<!-----------------------------------Atividade 15---------------------------------------->
+<script>
+    function receberNome(){
+        let nomes = []
+
+        let quantidade = Number(prompt(`Informe quantos números deseja inserir`))
+        if(quantidade <= 0){
+            alert(`Quantidade inválida de números, 1 é o menor aceito`)
+            return
+        }
+        for(let i = 0; i < quantidade; i++){
+            let nome = prompt(`Informe o ${i + 1}° nome`)
+            nomes.push(nome)
+        }
+        alert(`Os nomes digitados foram:\n${nomes.join('\n')}`)
+    }
+</script>
+<button onclick="receberNome()">Atividade 15</button>
+
+<!-----------------------------------Atividade 16---------------------------------------->
+<button onclick="
+    let notas = ['6','9','4','7','10']
+
+    for (let i = 0; i < notas.length; i++){
+        if(notas[i] < 7){
+            notas.splice(i, 1)
+            i--
+        }
+    }
+    alert(`Alunos aprovados:\n${notas.length}`)
+
+">Atividade 16</button>
+
+<!-----------------------------------Atividade 17---------------------------------------->
+<script>
+    let itens = []
+    function adicionarItens(){
+        let item = prompt(`Informe o nome do item que deseja adicionar`)
+
+        itens.push(item)
+    }
+
+    function listarItens(){
+        if(itens.length === 0){
+            alert(`Você ainda não registrou nenhum item`)
+            return
+        }
+        alert(`Itens registrados:\n${itens.join('\n')}`)
+    }
+    
+    function atividade17 (){
+    while(true){
+    let escolhaAtividade17 = prompt('---PAINEL---\n1 - Registrar um item\n2 - Listar itens\n3 - Sair')
+    switch(escolhaAtividade17){
+        case '1': {
+            adicionarItens()
+            break
+        }
+
+        case '2': {
+            listarItens()
+            break
+        }
+
+        case '3': {
+            alert(`Programa encerrado...`)
+            return
+        }
+
+        default : {
+            alert(`Opção inválida`)
+        }
+    }
+    }
+}
+</script>
+
+<button onclick="atividade17()">Atividade 17</button>
+
+<!-----------------------------------Atividade 18---------------------------------------->
+<button onclick="
+    let nomesAtividade18 = ['Ana','Bruno','Carlos','Maria','João']
+    let idadesAtividade18 = [20,21,19,22,18]
+
+    let dados = []
+
+    for (let i = 0; i < 5; i++){
+        dados.push({
+            nome: nomesAtividade18[i],
+            idade: idadesAtividade18[i]
+        })
+    }
+    console.table(dados)
+">Atividade 18</button>
+
+<!-----------------------------------Atividade 19---------------------------------------->
+<button onclick="
+    let nomesAtividade19 = []
+    
+    for(let i = 0; i < 3; i++){
+        let nome = prompt(`Informe o ${i + 1}° nome para armazenar`)
+        nomesAtividade19.push(nome)
+    }
+
+    let procurar = prompt(`Digite o nome que você deseja procurar`)
+
+    let encontrado = false 
+
+    for(let i = 0; i < nomesAtividade19.length; i++){
+        if(nomesAtividade19[i] == procurar){
+            alert(`Nome encontrado`)
+            encontrado = true
+            break
+        }
+    }
+    if(!encontrado){
+        alert(`Nome não encontrado`)
+    }
+
+">Atividade 19</button>
+
+<!-----------------------------------Atividade 20---------------------------------------->
+<button onclick="
+let cores = []
+let nums = []
+
+while(true){
+    let escolha = prompt(`---PAINEL---\n1 - Cadastrar cor\n2 - Listar cores\n3 - Calcular média de 3 números\n4 - Sair`)
+
+    switch(escolha){
+
+        case '1': {
+            let cor = prompt(`Informe a cor que deseja registrar`)
+            cores.push(cor)
+            break
+        }
+
+        case '2': {
+            if(cores.length === 0){
+                alert(`Você ainda não registrou nenhuma cor`)
+                break
+            }
+            alert(`Cores registradas:\n` + cores.join('\n'))
+            break
+        }
+
+        case '3': {
+            nums = []
+
+            for(let i = 0; i < 3; i++){
+                let numero = Number(prompt(`Digite o ${i + 1}° número`))
+                nums.push(numero)
+            }
+
+            let soma = 0
+
+            for(let i = 0; i < nums.length; i++){
+                soma += nums[i]
+            }
+
+            let media = soma / nums.length
+
+            alert(`Média: ${media}`)
+            break
+        }
+
+        case '4': {
+            alert(`Programa encerrado...`)
+            return
+        }
+
+        default: {
+            alert(`Opção inválida`)
+        }
+    }
+}
+">Atividade 20</button>
+</div>
+
+</body>
+</html>
