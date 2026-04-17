@@ -1,71 +1,87 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividades</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <h1>Lista de Atividades</h1>
-<div class="container">
-    <!-----------------------------------Atividade 1---------------------------------------->
-    <script>
-        function cadastroAlunos(){
-            let alunos = []
-            for (let i = 1; i < 10; i++){
-                let aluno = prompt(`Digite o nome do ${i}° aluno`)
-                alunos.push(aluno) 
-            }
-            alert(`Alunos cadastrados: \n${alunos.join("\n")}`)
-        }
-    </script>
-    <button onclick="cadastroAlunos()">Atividade 1</button>
+    <div class="container">
+        <!-----------------------------------Atividade 1---------------------------------------->
+        <div class="atividade">
+            <p>Crie uma função que cadastre 3 alunos (nome), armazene em um array e exiba todos.</p>
+            <script>
+                function cadastroAlunos() {
+                    let alunos = []
+                    for (let i = 0; i < 3; i++) {
+                        let aluno = prompt(`Digite o nome do ${i+ 1}° aluno`)
+                        alunos.push(aluno)
+                    }
+                    alert(`Alunos cadastrados: \n${alunos.join("\n")}`)
+                }
+            </script>
+            <button onclick="cadastroAlunos()">Atividade 1</button>
+        </div>
 
-
-    <!-----------------------------------Atividade 2---------------------------------------->
-    <button onclick="
-    let idades = ['1','2','3','4','5']
-    
+        <!-----------------------------------Atividade 2---------------------------------------->
+        <div class="atividade">
+            <p>Crie um array com 5 idades e utilize um laço for para exibir todos os valores.</p>
+            <button onclick="
+    let idades = ['10','21','33','64','5']
+    alert(`As idades registradas são: ${idades}`)
     for(let i = 0; i < idades.length; i++){
         alert(`A ${i + 1}° idade é ${idades[i]} anos`)
     }
     ">Atividade 2</button>
+        </div>
 
-<!-----------------------------------Atividade 3---------------------------------------->
-    <button onclick="
+        <!-----------------------------------Atividade 3---------------------------------------->
+        <div class="atividade">
+            <p>Crie um array de alunos e exiba a quantidade utilizando length.</p>
+            <button onclick="
         let alunos = ['Ana','Breno','Carla']
+        alert(`Os alunos registrados são: ${alunos}`)
         alert(`Quantidade de alunos cadastrados:\n${alunos.length}`)
     ">Atividade 3</button>
-    
-    <!-----------------------------------Atividade 4---------------------------------------->
-    <script>
-        function maioridade(){
-            let idade = prompt('Informe a idade')
-            if(idade < 18){
-                alert("O usuário é menor de idade")
-            }else{
-                alert("O usuário é maior de idade")
-            }
-        }
-    </script>
-    <button onclick="maioridade()">Atividade 4</button>
-
-    <!-----------------------------------Atividade 5---------------------------------------->
-<script>
-    function situacaoEscolar(){
-        let nota = prompt(`Informe a nota do aluno`)
-        if(nota >= 7){
-            alert(`Aprovado`)
-        }else{
-            alert(`Reprovado`)
-        }
-    }
-</script>
-    <button onclick="situacaoEscolar()">Atividade 5</button>
-
-    <!-----------------------------------Atividade 6---------------------------------------->
-    <button onclick="
+        </div>
+        <!-----------------------------------Atividade 4---------------------------------------->
+        <div class="atividade">
+            <p>Crie uma função que receba idade e retorne 'Maior' ou 'Menor' usando if/else.</p>
+            <script>
+                function maioridade() {
+                    let idade = prompt('Maior ou igual 18 anos = Maior de idade\nMenor de 18 anos = Menor de idade\nInforme a idade')
+                    if (idade < 18) {
+                        alert("O usuário é menor de idade")
+                    } else {
+                        alert("O usuário é maior de idade")
+                    }
+                }
+            </script>
+            <button onclick="maioridade()">Atividade 4</button>
+        </div>
+        <!-----------------------------------Atividade 5---------------------------------------->
+        <div class="atividade">
+            <p>Crie uma função que receba uma nota e classifique como Aprovado (≥7) ou Reprovado.</p>
+            <script>
+                function situacaoEscolar() {
+                    let nota = prompt(`Nota maior igual a 7 = Aprovado\nNota menor que 7 = Reprovado\nInforme a nota do aluno`)
+                    if (nota >= 7) {
+                        alert(`Aprovado`)
+                    } else {
+                        alert(`Reprovado`)
+                    }
+                }
+            </script>
+            <button onclick="situacaoEscolar()">Atividade 5</button>
+        </div>
+        <!-----------------------------------Atividade 6---------------------------------------->
+        <div class="atividade">
+            <p>Implemente um menu com switch (1 cadastrar, 2 listar, 3 sair).</p>
+            <button onclick="
     let nomes = []
     while(true){
     let escolha = prompt('---PAINEL---\n1 - Cadastrar\n 2 - Listar\n 3 - Sair')
@@ -93,9 +109,11 @@
     }
 }
     ">Atividade 6</button>
-
-    <!-----------------------------------Atividade 7---------------------------------------->
-<button onclick="
+        </div>
+        <!-----------------------------------Atividade 7---------------------------------------->
+        <div class="atividade">
+            <p>Crie um array de produtos, adicione 3 itens com push e exiba.</p>
+            <button onclick="
     let produtos = []
     
     produtos.push('Arroz')
@@ -104,21 +122,25 @@
 
     alert(`Produtos registrados:\n${produtos.join('\n')}`)
 ">Atividade 7</button>
+        </div>
+        <!-----------------------------------Atividade 8---------------------------------------->
+        <div class="atividade">
+            <p>Crie uma função que receba um array e imprima todos os elementos com for.</p>
+            <script>
+                function imprimir() {
+                    let elementos = ['Água', 'Fogo', 'Terra', 'Ar']
 
-<!-----------------------------------Atividade 8---------------------------------------->
-<script>
-function imprimir(){
-    let elementos = ['Água','Fogo','Terra','Ar']
-
-    for(let i = 0; i < elementos.length; i++){
-        alert(`Lista de elementos:\n${elementos[i]}`)
-    }
-}
-</script>
-<button onclick="imprimir()">Atividade 8</button>
-
-<!-----------------------------------Atividade 9---------------------------------------->
-<button onclick="
+                    for (let i = 0; i < elementos.length; i++) {
+                        alert(`Elemento:\n${elementos[i]}`)
+                    }
+                }
+            </script>
+            <button onclick="imprimir()">Atividade 8</button>
+        </div>
+        <!-----------------------------------Atividade 9---------------------------------------->
+        <div class="atividade">
+            <p>Crie um array de números e calcule a soma total usando for.</p>
+            <button onclick="
     alert('Vamos somar dois números')
     let numeros = []
 
@@ -136,34 +158,39 @@ function imprimir(){
     alert(`${numeros[0]} + ${numeros[1]} = ${total}`)
 
 ">Atividade 9</button>
+        </div>
+        <!-----------------------------------Atividade 10---------------------------------------->
+        <div class="atividade">
+            <p>Crie um array com 3 notas, calcule e exiba a média.</p>
+            <script>
+                function calcularMedia() {
+                    alert('Vamos calcular a sua média')
+                    let notas = []
 
-<!-----------------------------------Atividade 10---------------------------------------->
-<script>
-    function calcularMedia(){
-    alert('Vamos calcular a sua média')
-    let notas = []
+                    for (let i = 0; i < 3; i++) {
+                        let nota = Number(prompt(`Informe a ${i + 1}° nota`))
+                        notas.push(nota)
+                    }
 
-    for(let i = 0; i < 3; i++){
-        let nota = Number(prompt(`Informe a ${i + 1}° nota`))
-        notas.push(nota)
-    }
+                    let media = 0
 
-    let media = 0
+                    for (let i = 0; i < notas.length; i++) {
+                        media += notas[i]
+                    }
+                    media = media / 3
+                    alert(`A sua média foi ${media}`)
 
-    for(let i = 0; i < notas.length; i++){
-        media += notas[i]    
-    }
-    media = media / 3
-    alert(`A sua média foi ${media}`) 
-    
-    return media 
-}
-</script>
+                    return media
+                }
+            </script>
 
-<button onclick="calcularMedia()">Atividade 10</button>
-
-<!-----------------------------------Atividade 11---------------------------------------->
- <button onclick="
+            <button onclick="calcularMedia()">Atividade 10</button>
+        </div>
+        <!-----------------------------------Atividade 11---------------------------------------->
+        <div class="atividade">
+            <p>Utilize if/else para mostrar a situação do aluno baseado na média.</p>
+            <button onclick="
+            alert(`Media menor que 5 = Reprovado\nMedia entre 5 e 7 = Recuperação\nMedia maior que 7 = Aprovado`)
     let media = calcularMedia()
 
     if (media < 5){
@@ -174,9 +201,11 @@ function imprimir(){
         alert(`Média = ${media}\nSituação = Aprovado`)
     }
  ">Atividade 11</button>
-
-<!-----------------------------------Atividade 12---------------------------------------->
-<button onclick="
+        </div>
+        <!-----------------------------------Atividade 12---------------------------------------->
+        <div class="atividade">
+            <p>Crie um array de nomes e exiba com índice (0 - João, etc.).</p>
+            <button onclick="
     let nomesAtividade12 = []
     while(true){
         let escolha = prompt(`---PAINEL---\n1 - Cadastrar nome\n2 - Exibir nome\n3 - Sair`)
@@ -209,20 +238,25 @@ function imprimir(){
         }
     }
 ">Atividade 12</button>
-
-<!-----------------------------------Atividade 13---------------------------------------->
-<button onclick="
+        </div>
+        <!-----------------------------------Atividade 13---------------------------------------->
+        <div class="atividade">
+            <p>Crie um array de idades e mostre apenas maiores de idade.</p>
+            <button onclick="
     let idadesAtividade13 = ['20','15','30','99','10']
-
+            alert(`Idades cadastradas: ${idadesAtividade13}`)
     for (let i = 0; i < idadesAtividade13.length; i++){
         if(idadesAtividade13[i] >= 18){
             alert(`Índice ${i} - Idade ${idadesAtividade13[i]} = Maior de idade`)
         }
     }
 ">Atividade 13</button>
+        </div>
+        <!-----------------------------------Atividade 14---------------------------------------->
 
-<!-----------------------------------Atividade 14---------------------------------------->
-<button onclick="
+        <div class="atividade">
+            <p>Use switch para classificar cargos (A admin, U usuário, outros inválido).</p>
+            <button onclick="
     let escolha = prompt(`---PAINEL---\nA - Admin\nU- Usuário`).toUpperCase()
 
     switch(escolha){
@@ -231,7 +265,7 @@ function imprimir(){
             break
         }
 
-        case 'B': {
+        case 'U': {
             alert(`Você acessou como usuário`)
             break
         }
@@ -243,30 +277,35 @@ function imprimir(){
     }
 ">Atividade 14</button>
 
+        </div>
+        <!-----------------------------------Atividade 15---------------------------------------->
 
-<!-----------------------------------Atividade 15---------------------------------------->
-<script>
-    function receberNome(){
-        let nomes = []
+        <div class="atividade">
+            <p>Crie uma função que receba nome, adicione em array e exiba atualizado.</p>
+            <script>
+                function receberNome() {
+                    let nomes = []
 
-        let quantidade = Number(prompt(`Informe quantos números deseja inserir`))
-        if(quantidade <= 0){
-            alert(`Quantidade inválida de números, 1 é o menor aceito`)
-            return
-        }
-        for(let i = 0; i < quantidade; i++){
-            let nome = prompt(`Informe o ${i + 1}° nome`)
-            nomes.push(nome)
-        }
-        alert(`Os nomes digitados foram:\n${nomes.join('\n')}`)
-    }
-</script>
-<button onclick="receberNome()">Atividade 15</button>
-
-<!-----------------------------------Atividade 16---------------------------------------->
-<button onclick="
+                    let quantidade = Number(prompt(`Informe quantos números deseja inserir`))
+                    if (quantidade <= 0) {
+                        alert(`Quantidade inválida de números, 1 é o menor aceito`)
+                        return
+                    }
+                    for (let i = 0; i < quantidade; i++) {
+                        let nome = prompt(`Informe o ${i + 1}° nome`)
+                        nomes.push(nome)
+                    }
+                    alert(`Os nomes digitados foram:\n${nomes.join('\n')}`)
+                }
+            </script>
+            <button onclick="receberNome()">Atividade 15</button>
+        </div>
+        <!-----------------------------------Atividade 16---------------------------------------->
+        <div class="atividade">
+            <p>Crie um array de notas e conte quantos alunos foram aprovados.</p>
+            <button onclick="
     let notas = ['6','9','4','7','10']
-
+        alert(`Notas = ${notas}`)
     for (let i = 0; i < notas.length; i++){
         if(notas[i] < 7){
             notas.splice(i, 1)
@@ -276,55 +315,62 @@ function imprimir(){
     alert(`Alunos aprovados:\n${notas.length}`)
 
 ">Atividade 16</button>
+        </div>
+        <!-----------------------------------Atividade 17---------------------------------------->
+        <div class="atividade">
+            <p>Crie um menu com função e switch para adicionar e listar itens.</p>
+            <script>
+                let itens = []
 
-<!-----------------------------------Atividade 17---------------------------------------->
-<script>
-    let itens = []
-    function adicionarItens(){
-        let item = prompt(`Informe o nome do item que deseja adicionar`)
+                function adicionarItens() {
+                    let item = prompt(`Informe o nome do item que deseja adicionar`)
 
-        itens.push(item)
-    }
+                    itens.push(item)
+                }
 
-    function listarItens(){
-        if(itens.length === 0){
-            alert(`Você ainda não registrou nenhum item`)
-            return
-        }
-        alert(`Itens registrados:\n${itens.join('\n')}`)
-    }
-    
-    function atividade17 (){
-    while(true){
-    let escolhaAtividade17 = prompt('---PAINEL---\n1 - Registrar um item\n2 - Listar itens\n3 - Sair')
-    switch(escolhaAtividade17){
-        case '1': {
-            adicionarItens()
-            break
-        }
+                function listarItens() {
+                    if (itens.length === 0) {
+                        alert(`Você ainda não registrou nenhum item`)
+                        return
+                    }
+                    alert(`Itens registrados:\n${itens.join('\n')}`)
+                }
 
-        case '2': {
-            listarItens()
-            break
-        }
+                function atividade17() {
+                    while (true) {
+                        let escolhaAtividade17 = prompt(
+                            '---PAINEL---\n1 - Registrar um item\n2 - Listar itens\n3 - Sair')
+                        switch (escolhaAtividade17) {
+                            case '1': {
+                                adicionarItens()
+                                break
+                            }
 
-        case '3': {
-            alert(`Programa encerrado...`)
-            return
-        }
+                            case '2': {
+                                listarItens()
+                                break
+                            }
 
-        default : {
-            alert(`Opção inválida`)
-        }
-    }
-    }
-}
-</script>
+                            case '3': {
+                                alert(`Programa encerrado...`)
+                                return
+                            }
 
-<button onclick="atividade17()">Atividade 17</button>
+                            default: {
+                                alert(`Opção inválida`)
+                            }
+                        }
+                    }
+                }
+            </script>
 
-<!-----------------------------------Atividade 18---------------------------------------->
-<button onclick="
+            <button onclick="atividade17()">Atividade 17</button>
+        </div>
+        <!-----------------------------------Atividade 18---------------------------------------->
+        <div class="atividade">
+            <p>Crie um array de objetos (nome, idade) e exiba com console.table().</p>
+            <button onclick="
+            alert('ATENÇÃO\nVocê precisa abrir o console para visualizar a tabela\n\nAperte F12 e clique em Console no menu superior')
     let nomesAtividade18 = ['Ana','Bruno','Carlos','Maria','João']
     let idadesAtividade18 = [20,21,19,22,18]
 
@@ -338,23 +384,25 @@ function imprimir(){
     }
     console.table(dados)
 ">Atividade 18</button>
-
-<!-----------------------------------Atividade 19---------------------------------------->
-<button onclick="
+        </div>
+        <!-----------------------------------Atividade 19---------------------------------------->
+        <div class="atividade">
+            <p>Crie um array de nomes e implemente busca utilizando for e if.</p>
+            <button onclick="
     let nomesAtividade19 = []
     
     for(let i = 0; i < 3; i++){
         let nome = prompt(`Informe o ${i + 1}° nome para armazenar`)
         nomesAtividade19.push(nome)
     }
-
+    alert(`Nomes cadastrados: ${nomesAtividade19}`)
     let procurar = prompt(`Digite o nome que você deseja procurar`)
 
     let encontrado = false 
 
     for(let i = 0; i < nomesAtividade19.length; i++){
         if(nomesAtividade19[i] == procurar){
-            alert(`Nome encontrado`)
+            alert(`Nome encontrado: ${nomesAtividade19[i]}`)
             encontrado = true
             break
         }
@@ -364,9 +412,11 @@ function imprimir(){
     }
 
 ">Atividade 19</button>
-
-<!-----------------------------------Atividade 20---------------------------------------->
-<button onclick="
+        </div>
+        <!-----------------------------------Atividade 20---------------------------------------->
+        <div class="atividade">
+            <p>Desenvolva um sistema completo com cadastro, listagem, média e menu switch.</p>
+            <button onclick="
 let cores = []
 let nums = []
 
@@ -421,7 +471,9 @@ while(true){
     }
 }
 ">Atividade 20</button>
-</div>
+        </div>
+    </div>
 
 </body>
+
 </html>
